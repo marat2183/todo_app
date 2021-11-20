@@ -1,0 +1,309 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1370px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.header{
+    padding-top: 39px;
+}
+.header__inner{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 32px;
+}
+
+.header__search{
+    position: relative;
+    min-width: 300px;
+    max-width: 700px;
+    height: 20px;
+    margin-left: 20px;
+}
+.header__search-input{
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.01em;
+    color: #90A0B7;
+    border: hidden;
+    margin-left: 12px;
+    /* margin-left: 15px; */
+}
+.header__search-input:focus{
+    outline: 0;
+    border: hidden;
+}
+.header__search::before{
+    position: absolute;
+    display: inline-block;
+    content: url('../img/search.svg');
+    top: -1px;
+    left: -15px;
+}
+.header__userbtns{
+    display: flex;
+    align-items: center;
+}
+.header__userbtns-avatar{
+    margin-left: 33px;
+    width: 32px;
+    height: 32px;
+    border-radius: 15px;
+}
+.top{
+    padding-top: 53px;
+}
+.top__inner{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.top__title{
+    margin: 0px;
+}
+.top__link{
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 8px 30px;
+    background-color: #884CB2;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+}
+.top__link-text{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 9px;
+    color: #FFFFFF;
+}
+.active{
+    padding-top: 41px;
+}
+.active__inner{
+    max-width: 915px;
+}
+.active__title{
+margin: 0px;
+margin-bottom: 28px;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 27px;
+color: #1D262C;
+}
+.active__task-list{
+    margin-left: 15px;
+}
+.active__task-list-item{
+    min-height: 61px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.active__task-list-item{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 0.5px solid #E0E0E0;
+}
+.active__task-priority{
+    position: relative;
+}
+.active__task-priority::before{
+    position: absolute;
+    top: -1px;
+    left: -15px;
+    display: inline-block;
+    content: url('../img/temp.svg');
+}
+
+.active__task-name{
+    margin: 0px;
+    width: 323px;
+    position: relative;
+}
+.active__task-name::before{
+    position: absolute;
+    top: -1px;
+    left: -15px;
+    display: inline-block;
+    content: url('../img/temp1.svg');
+}
+.active__task-status{
+    text-decoration: none;
+    color: rgb(242, 153, 74);
+    padding: 1px 17px;
+    background-color: rgba(242, 153, 74, .2);
+    border-radius: 9px;
+}
+.active__task-edit{
+    text-decoration: none;
+}
+.active__task-delete{
+    text-decoration: none;
+}
+.inactive{
+    padding-top: 46px;
+}
+.inactive__inner{
+    max-width: 915px;
+}
+.inactive__top{
+    display: flex;
+    align-items: center;
+    margin-bottom: 28px;
+}
+.inactive__title{
+    margin: 0px !important; 
+    margin-bottom: 28px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #1D262C;
+}
+.inactive__title-status{
+    text-decoration: none;
+    flex-flow: wrap;
+    color: rgba(39, 174, 96, 1);
+    padding: 1px 17px;
+    background-color: rgba(39, 174, 96, 0.2);
+    border-radius: 9px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.0676923px;
+    margin-left: 10px;
+}
+
+.inactive__task-list{
+    color: #BDBDBD;
+    margin-left: 15px;
+}
+.inactive__task-list-item{
+    min-height: 61px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.inactive__task-list-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 0.5px solid #E0E0E0;
+}
+.inactive__task-priority{
+    position: relative;
+}
+.inactive__task-priority::before{
+    position: absolute;
+    top: -1px;
+    left: -15px;
+    display: inline-block;
+    content: url('../img/temp.svg');
+}
+
+.inactive__task-name{
+
+    margin: 0px;
+    width: 323px;
+    position: relative;
+}
+.inactive__task-name::before{
+    position: absolute;
+    top: -1px;
+    left: -15px;
+    display: inline-block;
+    content: url('../img/temp1.svg');
+}
+.inactive__task-status{
+    text-decoration: none;
+    color: rgba(39, 174, 96, 1);
+    padding: 1px 17px;
+    background-color: rgba(39, 174, 96, 0.2);
+    border-radius: 9px;
+}
+.inactive__task-edit{
+    text-decoration: none;
+}
+.inactive__task-delete{
+    text-decoration: none;
+}
+@media (max-width: 770px) {
+    .active__task-name{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .inactive__task-name{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    .header__inner{
+        flex-direction: column-reverse;
+        height: auto;
+        align-items: flex-end;
+    }
+    .header__search{
+        flex: 100%;
+        align-self: flex-start;
+    }
+    .header__userbtns{
+        flex: 100%;
+        margin-bottom: 15px;
+    }
+    .header__search-input{
+        font-size: 10px;
+    }
+    .top{
+        padding-top: 25px;
+    }
+    .top__inner{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .top__link{
+        margin-left: 0px;
+    }
+    .top__title{
+        margin-bottom: 10px;
+    }
+    .active__task-priority{
+        margin-left: auto;
+        flex: 50%;
+        margin-bottom: 15px;
+    }
+    .active__task-status{
+        margin-right: 25px;
+        margin-bottom: 15px;
+    }
+    .inactive__task-priority{
+        margin-left: auto;
+        flex: 50%;
+        margin-bottom: 15px;
+    }
+    .inactive__task-status{
+        margin-right: 25px;
+        margin-bottom: 15px;
+    }
+}
