@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
 </head>
 <body>
     <header class="header">
@@ -24,133 +26,180 @@
                 <div class="header__userbtns">
                     <object data="img/Vector.svg" width="16" height="20"> </object>
                     <img src="img/avatar.png" alt="" class="header__userbtns-avatar">
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
-    <section class="top">
+    <section class="main">
         <div class="container">
-            <div class="top__inner">
-                <h1 class="top__title">
-                    You’ve got 7 task today 
-                </h1>
-                <a href="" class="top__link">
-                    <object data="img/plus-add 2.svg" width="18" height="18"> </object>
-                    <span class="top__link-text">Add new</span>
-                </a>
-            </div>
+            <div class="main__inner">
+                <section class="taks-section">
+                    <div class="top">
+                        <div class="top__inner">
+                            <h1 class="top__title">
+                                You’ve got 7 task today 
+                            </h1>
+                            <a href="" class="top__link">
+                                <object data="img/plus-add 2.svg" width="18" height="18"> </object>
+                                <span class="top__link-text">Add new</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="active">
+                        <div class="active__inner">
+                            <h3 class="active__title">
+                                On hold
+                            </h3>
+                            <div class="active__task-list">
+                                <div class="active__task-list-item">
+                                    <p class="active__task-name">Evaluate the addition and deletion of user IDs.</p>
+                                    <a class="active__task-status">Pending</a>
+                                    <span class="active__task-priority">Minor</span>
+                                    <span class="active__task-creator">Ivan Ivanov</span>
+                                    <div class="active__task-btns">
+                                        <a href="" class="active__task-edit">
+                                            <img src="./img/edit.svg" alt="" class="active__task-edit-icon">
+                                        </a>
+                                        <a href="" class="active__task-delete">
+                                            <img src="./img/delete.svg" alt="" class="active__task-delete-icon">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="active__task-list-item">
+                                    <p class="active__task-name">Evaluate the addition and deletion of user IDs.</p>
+                                    <a class="active__task-status">Pending</a>
+                                    <span class="active__task-priority">Minor</span>
+                                    <span class="active__task-creator">Ivan Ivanov</span>
+                                    <div class="active__task-btns">
+                                        <a href="" class="active__task-edit">
+                                            <img src="./img/edit.svg" alt="" class="active__task-edit-icon">
+                                        </a>
+                                        <a href="" class="active__task-delete">
+                                            <img src="./img/delete.svg" alt="" class="active__task-delete-icon">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="active__task-list-item">
+                                    <p class="active__task-name">Evaluate the addition and deletion of user IDs.</p>
+                                    <a class="active__task-status">Pending</a>
+                                    <span class="active__task-priority">Minor</span>
+                                    <span class="active__task-creator">Ivan Ivanov</span>
+                                    <div class="active__task-btns">
+                                        <a href="" class="active__task-edit">
+                                            <img src="./img/edit.svg" alt="" class="active__task-edit-icon">
+                                        </a>
+                                        <a href="" class="active__task-delete">
+                                            <img src="./img/delete.svg" alt="" class="active__task-delete-icon">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inactive">
+                        <div class="inactive__inner">
+                            <div class="inactive__top">
+                                <h3 class="inactive__title">
+                                    Completed
+                                </h3>
+                                <a class="inactive__title-status">
+                                    Completed
+                                </a>
+                            </div>
+                            <div class="inactive__task-list">
+                                <div class="inactive__task-list-item">
+                                    <p class="inactive__task-name">Evaluate the addition and deletion of user IDs.</p>
+                                    <a class="inactive__task-status">Completed</a>
+                                    <span class="inactive__task-priority">Minor</span>
+                                    <span class="inactive__task-creator">Ivan Ivanov</span>
+                                    <div class="inactive__task-btns">
+                                        <a href="" class="inactive__task-edit">
+                                            <img src="./img/edit.svg" alt="" class="inactive__task-edit-icon">
+                                        </a>
+                                        <a href="" class="active__task-delete">
+                                            <img src="./img/delete.svg" alt="" class="inactive__task-delete-icon">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="inactive__task-list-item">
+                                    <p class="inactive__task-name">Evaluate the addition and deletion of user IDs.</p>
+                                    <a class="inactive__task-status">Completed</a>
+                                    <span class="inactive__task-priority">Minor</span>
+                                    <span class="inactive__task-creator">Ivan Ivanov</span>
+                                    <div class="inactive__task-btns">
+                                        <a href="" class="inactive__task-edit">
+                                            <img src="./img/edit.svg" alt="" class="inactive__task-edit-icon">
+                                        </a>
+                                        <a href="" class="active__task-delete">
+                                            <img src="./img/delete.svg" alt="" class="inactive__task-delete-icon">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="inactive__task-list-item">
+                                    <p class="inactive__task-name">Evaluate the addition and deletion of user IDs.</p>
+                                    <a class="inactive__task-status">Completed</a>
+                                    <span class="inactive__task-priority">Minor</span>
+                                    <span class="inactive__task-creator">Ivan Ivanov</span>
+                                    <div class="inactive__task-btns">
+                                        <a href="" class="inactive__task-edit">
+                                            <img src="./img/edit.svg" alt="" class="inactive__task-edit-icon">
+                                        </a>
+                                        <a href="" class="active__task-delete">
+                                            <img src="./img/delete.svg" alt="" class="inactive__task-delete-icon">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="tasks-list-section">
+                    <div class="task-list__header">
+                        <h3 class="task-list__title">Your task lists</h3>
+                        <a href="" class="task-list__add-btn">
+                            <img src="./img/add-icon.svg" alt="">
+                        </a>
+                        <div class="task-list__remove-btn">
+                            <img src="./img/return.svg" alt="" class="inactive__task-edit-icon">
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__list-item">
+                                <a href="" class="menu__list-link">First</a>
+                                <a href="" class="inactive__task-edit">
+                                    <img src="./img/edit.svg" alt="" class="inactive__task-edit-icon">
+                                </a>
+                                <a href="" class="active__task-delete">
+                                    <img src="./img/delete.svg" alt="" class="inactive__task-delete-icon">
+                                </a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a href="" class="menu__list-link">Second</a>
+                                <a href="" class="inactive__task-edit">
+                                    <img src="./img/edit.svg" alt="" class="inactive__task-edit-icon">
+                                </a>
+                                <a href="" class="active__task-delete">
+                                    <img src="./img/delete.svg" alt="" class="inactive__task-delete-icon">
+                                </a>
+                            </li>
+                            <li class="menu__list-item">
+                                <a href="" class="menu__list-link">Third</a>
+                                <a href="" class="inactive__task-edit">
+                                    <img src="./img/edit.svg" alt="" class="inactive__task-edit-icon">
+                                </a>
+                                <a href="" class="active__task-delete">
+                                    <img src="./img/delete.svg" alt="" class="inactive__task-delete-icon">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>    
         </div>
-    </section>
-    <section class="active">
-        <div class="container">
-            <div class="active__inner">
-                <h3 class="active__title">
-                    On hold
-                </h3>
-                <div class="active__task-list">
-                    <div class="active__task-list-item">
-                        <p class="active__task-name">Evaluate the addition and deletion of user IDs.</p>
-                        <a class="active__task-status">Pending</a>
-                        <span class="active__task-priority">Minor</span>
-                        <span class="active__task-creator">Ivan Ivanov</span>
-                        <div class="active__task-btns">
-                            <a href="" class="active__task-edit">
-                                <img src="./img/edit.svg" alt="" class="active__task-edit-icon">
-                            </a>
-                            <a href="" class="active__task-delete">
-                                <img src="./img/delete.svg" alt="" class="active__task-delete-icon">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="active__task-list-item">
-                        <p class="active__task-name">Evaluate the addition and deletion of user IDs.</p>
-                        <a class="active__task-status">Pending</a>
-                        <span class="active__task-priority">Minor</span>
-                        <span class="active__task-creator">Ivan Ivanov</span>
-                        <div class="active__task-btns">
-                            <a href="" class="active__task-edit">
-                                <img src="./img/edit.svg" alt="" class="active__task-edit-icon">
-                            </a>
-                            <a href="" class="active__task-delete">
-                                <img src="./img/delete.svg" alt="" class="active__task-delete-icon">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="active__task-list-item">
-                        <p class="active__task-name">Evaluate the addition and deletion of user IDs.</p>
-                        <a class="active__task-status">Pending</a>
-                        <span class="active__task-priority">Minor</span>
-                        <span class="active__task-creator">Ivan Ivanov</span>
-                        <div class="active__task-btns">
-                            <a href="" class="active__task-edit">
-                                <img src="./img/edit.svg" alt="" class="active__task-edit-icon">
-                            </a>
-                            <a href="" class="active__task-delete">
-                                <img src="./img/delete.svg" alt="" class="active__task-delete-icon">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="inactive">
-        <div class="container">
-            <div class="inactive__inner">
-                <div class="inactive__top">
-                    <h3 class="inactive__title">
-                        Completed
-                    </h3>
-                    <a class="inactive__title-status">
-                        Completed
-                    </a>
-                </div>
-                <div class="inactive__task-list">
-                    <div class="inactive__task-list-item">
-                        <p class="inactive__task-name">Evaluate the addition and deletion of user IDs.</p>
-                        <a class="inactive__task-status">Completed</a>
-                        <span class="inactive__task-priority">Minor</span>
-                        <span class="inactive__task-creator">Ivan Ivanov</span>
-                        <div class="inactive__task-btns">
-                            <a href="" class="inactive__task-edit">
-                                <img src="./img/edit.svg" alt="" class="inactive__task-edit-icon">
-                            </a>
-                            <a href="" class="active__task-delete">
-                                <img src="./img/delete.svg" alt="" class="inactive__task-delete-icon">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="inactive__task-list-item">
-                        <p class="inactive__task-name">Evaluate the addition and deletion of user IDs.</p>
-                        <a class="inactive__task-status">Completed</a>
-                        <span class="inactive__task-priority">Minor</span>
-                        <span class="inactive__task-creator">Ivan Ivanov</span>
-                        <div class="inactive__task-btns">
-                            <a href="" class="inactive__task-edit">
-                                <img src="./img/edit.svg" alt="" class="inactive__task-edit-icon">
-                            </a>
-                            <a href="" class="active__task-delete">
-                                <img src="./img/delete.svg" alt="" class="inactive__task-delete-icon">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="inactive__task-list-item">
-                        <p class="inactive__task-name">Evaluate the addition and deletion of user IDs.</p>
-                        <a class="inactive__task-status">Completed</a>
-                        <span class="inactive__task-priority">Minor</span>
-                        <span class="inactive__task-creator">Ivan Ivanov</span>
-                        <div class="inactive__task-btns">
-                            <a href="" class="inactive__task-edit">
-                                <img src="./img/edit.svg" alt="" class="inactive__task-edit-icon">
-                            </a>
-                            <a href="" class="active__task-delete">
-                                <img src="./img/delete.svg" alt="" class="inactive__task-delete-icon">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </section>    
 </body>
 </html>
