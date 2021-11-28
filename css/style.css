@@ -154,6 +154,7 @@ color: #1D262C;
     margin: 0px;
     width: 323px;
     position: relative;
+    word-wrap: break-word;
 }
 .active__task-name::before{
     position: absolute;
