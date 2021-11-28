@@ -278,15 +278,47 @@ color: #1D262C;
 .task-list__header{
     margin-bottom: 50px;
 }
+.task-list__add-btn{
+    width: 25px;
+    height: 25px;
+}
 .task-list__title{
     padding-left: 15px;
     margin: 0px;
     font-size: 2em;
     margin-right: 20px;
 }
+.task-list-add{
+    opacity: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    transition: all 1s;
+    margin-top: -25px;
+}
+.task-list-input{
+    border: none;
+    border-bottom: 1px solid #90A0B7;
+    width: 300px;
+    line-height: 25px;
+    font-size: 20px;
+}
+.task-list-input:focus{
+    outline: none;
+    border-color: #884CB2;
+}
 .task-list__add-btn{
+    /* margin-left: 15px; */
     width: 25px;
     height: 25px;
+    cursor: pointer;
+}
+.title-task-list__add-btn{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 .menu__list{
     padding: 0px;
@@ -310,6 +342,102 @@ color: #1D262C;
     text-decoration: none;
     color: #000000;
     width: 100%;
+}
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+}
+.popup.open{
+    top: 0;
+    left: 0;
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+.popup__inner{
+    padding: 25px 15px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 300px;
+    background-color: #FFFFFF;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+
+}
+.popup__close{
+    align-self: flex-end;
+}
+/* .popup__task-id{
+    display: none;
+} */
+.popup__taks-name{
+    margin-bottom: 15px;
+}
+label{
+    font-family: 'Poppins', sans-serif;
+}
+select{
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid #90A0B7;
+}
+.popup__taks-name{
+    line-height: 25px;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid #90A0B7;
+}
+.popup__taks-name:focus, .popup__taks-name:focus{
+    outline: none;
+    border-color: #884CB2;
+}
+select:focus, select:focus{
+    outline: none;
+    border-color: #884CB2;
+}
+.popup__btns{
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+}
+.success-btn{
+    margin-right: 15px;
+    background-color: #884CB2;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 10px;
+    border: 1px solid #884CB2;
+}
+.success-btn:hover{
+    background-color: white;
+    color: #884CB2;
+    border: 1px solid #884CB2;
+    transition: 0.1s;
+}
+.cancel-btn{
+    color: #884CB2;
+    border: 1px solid #90A0B7;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+.cancel-btn:hover{
+    color: white;
+    border: 1px solid rgba(136,76,178, .65);
+    background-color: rgba(136,76,178, .65);
+    border-color: #884CB2;
+    transition: 0.1s;
 }
 @media (max-width: 1200px) {
     .task-list__remove-btn{
