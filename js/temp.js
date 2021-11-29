@@ -1,7 +1,7 @@
 import {openPopup, closePopup, addDataToPopup, getPopupData, confirmationPopup, createPopup, editPopup}  from './services/popupServices.js';
 import {getActiveTaskDate, getInactiveTaskDate, editTask, needToEdit, deleteByTaskId} from './services/taskServices.js';
 import {addToHoldList, addToCompletedList} from './services/taskTransmissionsService.js'
-import {showTaskListInput} from './services/taskListTransmissions.js'
+import {showTaskListInput, deleteTaksList, editTaskList} from './services/taskListTransmissions.js'
 
 
 const popup = document.querySelector('.popup__inner');
@@ -14,6 +14,8 @@ const editInactiveTasks = document.querySelectorAll('.inactive__task-edit-icon')
 const deleteActiveTasks = document.querySelectorAll('.active__task-delete-icon');
 const deleteInactiveTasks = document.querySelectorAll('.inactive__task-delete-icon');
 const addTaskListBtn = document.querySelector('.title-task-list__add-btn');
+const TaskListeditIcon = document.querySelectorAll('.tasklist-edit');
+const TaskListdeleteIcon = document.querySelectorAll('.tasklist-delete'); 
 // const taskListMenu = document.querySelector('.menu');
 
 createTask.addEventListener('click', function(event) {
@@ -144,7 +146,32 @@ addTaskListBtn.addEventListener('click', function(event){
     if (document.querySelector('.tasks-list-section').childElementCount === 2){
         showTaskListInput();
     }
-    
-
     console.log("add task click");
+});
+
+
+TaskListdeleteIcon.forEach(function(button){
+    button.addEventListener('click', function(event) {
+        console.log('click')
+        event.preventDefault();
+        // editPopup();
+        let taskList = this.closest('.menu__list-item');
+        const taskListId = taskList.dataset.id;
+        deleteTaksList(taskListId)
+        // console.log(taskListId);
+        // editPopup(taskObj);
+        // addDataToPopup(popup, taskObj)
+        // openPopup();
+    });
+});
+
+
+TaskListeditIcon.forEach(function(button){
+    button.addEventListener('click', function(event) {
+        console.log('click')
+        event.preventDefault();
+        let taskList = this.closest('.menu__list-item');
+        const taskListId = taskList.dataset.id;
+        editTaskList(taskListId)
+    });
 });

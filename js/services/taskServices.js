@@ -25,7 +25,7 @@ function getInactiveTaskDate(task){
     taskObj.id = task.dataset.id
     return taskObj
 }
-
+// Refactoring
 function editTask(taskId, newTaskData){
     let oldTaskDataBlock = document.querySelector('.task[data-id=\"' + taskId + '\"]');
     if (oldTaskDataBlock.classList[1] === "active__task-list-item"){
